@@ -1,0 +1,50 @@
+@model ProjectResume.Models.WorkExperience
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h2>Edit</h2>
+
+<form asp-action="Edit">
+    <div class="form-horizontal">
+        <h4>WorkExperience</h4>
+        <hr />
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <input type="hidden" asp-for="ID" />
+        <div class="form-group">
+            <label asp-for="Employer" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="Employer" class="form-control" />
+                <span asp-validation-for="Employer" class="text-danger" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="EmploymentDate" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="EmploymentDate" class="form-control" />
+                <span asp-validation-for="EmploymentDate" class="text-danger" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="JobDuties" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="JobDuties" class="form-control" />
+                <span asp-validation-for="JobDuties" class="text-danger" />
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+</form>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
