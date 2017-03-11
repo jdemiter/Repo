@@ -11,10 +11,9 @@ namespace ProjectResume.Models
     {
         public int ID { get; set; }
         public string School { get; set; }
-
-        [DisplayName("Degree Received")]
+        [Display(Name = "Degree Received")]
         public string DegreeReceived { get; set; }
-        [DisplayName("Degree Completed")]
+        [Display(Name = "Date Completed")]
         public DateTime DateCompleted { get; set; }
 
     }

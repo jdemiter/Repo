@@ -8,9 +8,10 @@ using ProjectResume.Data;
 namespace ProjectResume.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20170311175919_addstartenddates")]
+    partial class addstartenddates
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
             modelBuilder
                 .HasAnnotation("ProductVersion", "1.0.1")
@@ -217,8 +218,7 @@ namespace ProjectResume.Data.Migrations
 
                     b.Property<string>("LastName");
 
-                    b.Property<string>("PhoneNumber")
-                        .IsRequired();
+                    b.Property<string>("PhoneNumber");
 
                     b.HasKey("ID");
 
@@ -230,13 +230,11 @@ namespace ProjectResume.Data.Migrations
                     b.Property<int>("ID")
                         .ValueGeneratedOnAdd();
 
+                    b.Property<DateTime>("VolunteerDate");
+
                     b.Property<string>("VolunteerDuties");
 
-                    b.Property<DateTime>("VolunteerEndDate");
-
                     b.Property<string>("VolunteerOrganization");
-
-                    b.Property<DateTime>("VolunteerStartDate");
 
                     b.HasKey("ID");
 

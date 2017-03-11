@@ -53,7 +53,7 @@ namespace ProjectResume.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("ID,CertificationReceived,DateReceived,From")] Certifications certifications)
+        public async Task<IActionResult> Create([Bind("ID,CertificationReceived,From, DateReceived")] Certifications certifications)
         {
             if (ModelState.IsValid)
             {
@@ -85,7 +85,7 @@ namespace ProjectResume.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("ID,CertificationReceived,DateReceived,From")] Certifications certifications)
+        public async Task<IActionResult> Edit(int id, [Bind("ID,CertificationReceived,From, DateReceived")] Certifications certifications)
         {
             if (id != certifications.ID)
             {

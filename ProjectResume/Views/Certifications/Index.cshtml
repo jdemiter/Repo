@@ -12,15 +12,17 @@
 <table class="table">
     <thead>
         <tr>
+            
             <th>
                 @Html.DisplayNameFor(model => model.CertificationReceived)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.DateReceived)
-            </th>
-            <th>
                 @Html.DisplayNameFor(model => model.From)
             </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DateReceived)
+            </th>
+            
             <th></th>
         </tr>
     </thead>
@@ -31,11 +33,12 @@
                 @Html.DisplayFor(modelItem => item.CertificationReceived)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.DateReceived)
-            </td>
-            <td>
                 @Html.DisplayFor(modelItem => item.From)
             </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DateReceived)
+            </td>
+            
             <td>
                 <a asp-action="Edit" asp-route-id="@item.ID">Edit</a> |
                 <a asp-action="Details" asp-route-id="@item.ID">Details</a> |

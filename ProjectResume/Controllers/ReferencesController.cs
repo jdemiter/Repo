@@ -53,7 +53,7 @@ namespace ProjectResume.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("ID,Address,EmailAddress,FirstName,LastName,PhoneNumber")] References references)
+        public async Task<IActionResult> Create([Bind("ID,FirstName,LastName,Address,PhoneNumber,EmailAddress")] References references)
         {
             if (ModelState.IsValid)
             {
@@ -85,7 +85,7 @@ namespace ProjectResume.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("ID,Address,EmailAddress,FirstName,LastName,PhoneNumber")] References references)
+        public async Task<IActionResult> Edit(int id, [Bind("ID,FirstName,LastName,Address,PhoneNumber,EmailAddress")] References references)
         {
             if (id != references.ID)
             {

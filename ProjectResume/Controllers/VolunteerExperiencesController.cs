@@ -53,7 +53,7 @@ namespace ProjectResume.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("ID,VolunteerDate,VolunteerDuties,VolunteerOrganization")] VolunteerExperience volunteerExperience)
+        public async Task<IActionResult> Create([Bind("ID,VolunteerOrganization, VolunteerStartDate, VolunteerEndDate, VolunteerDuties")] VolunteerExperience volunteerExperience)
         {
             if (ModelState.IsValid)
             {
@@ -85,7 +85,7 @@ namespace ProjectResume.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("ID,VolunteerDate,VolunteerDuties,VolunteerOrganization")] VolunteerExperience volunteerExperience)
+        public async Task<IActionResult> Edit(int id, [Bind("ID,VolunteerOrganization, VolunteerStartDate, VolunteerEndDate, VolunteerDuties")] VolunteerExperience volunteerExperience)
         {
             if (id != volunteerExperience.ID)
             {
