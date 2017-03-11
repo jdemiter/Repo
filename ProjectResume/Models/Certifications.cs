@@ -15,7 +15,7 @@ namespace ProjectResume.Models
         [Display(Name = "Received From")]
         public string From { get; set; }
         [Display(Name = "Date Received")]
-        [DataType(DataType.Date), DisplayFormat(DataFormatString = "{0:MM/dd/yyyy}", ApplyFormatInEditMode = true)]
+        [DisplayFormat(DataFormatString = "{0:MM/dd/yyyy}", ApplyFormatInEditMode = true)]
         public DateTime DateReceived { get; set; }
 
 

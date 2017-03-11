@@ -10,13 +10,15 @@ namespace ProjectResume.Models
     {
         public int ID { get; set; }
         public string Employer { get; set; }
+        public string Location { get; set; }
         [Display(Name = "Job Title")]
         public string JobTitle { get; set; }
         [Display(Name = "Start Date")]
-        [DataType(DataType.Date), DisplayFormat(DataFormatString = "{0:MM/dd/yyyy}", ApplyFormatInEditMode = true)]
+        [DataType(DataType.Date)]
+        [Required(ErrorMessage = "Start Date Required")]
         public DateTime EmploymentStartDate { get; set; }
         [Display(Name = "End Date")]
-        [DataType(DataType.Date), DisplayFormat(DataFormatString = "{0:MM/dd/yyyy}", ApplyFormatInEditMode = true)]
+        [DataType(DataType.Date)]
         public DateTime EmploymentEndDate { get; set; }
     }
 }

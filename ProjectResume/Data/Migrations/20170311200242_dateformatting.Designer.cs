@@ -8,9 +8,10 @@ using ProjectResume.Data;
 namespace ProjectResume.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20170311200242_dateformatting")]
+    partial class dateformatting
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
             modelBuilder
                 .HasAnnotation("ProductVersion", "1.0.1")
@@ -255,8 +256,6 @@ namespace ProjectResume.Data.Migrations
                     b.Property<DateTime>("EmploymentStartDate");
 
                     b.Property<string>("JobTitle");
-
-                    b.Property<string>("Location");
 
                     b.HasKey("ID");
 

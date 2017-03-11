@@ -14,6 +14,7 @@ namespace ProjectResume.Models
         [Display(Name = "Degree Received")]
         public string DegreeReceived { get; set; }
         [Display(Name = "Date Completed")]
+        [DataType(DataType.Date)]
         public DateTime DateCompleted { get; set; }
 
     }

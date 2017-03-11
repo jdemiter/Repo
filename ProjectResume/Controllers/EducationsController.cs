@@ -53,7 +53,7 @@ namespace ProjectResume.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("ID,School, DegreeReceived, DegreeCompleted")] Education education)
+        public async Task<IActionResult> Create([Bind("ID,School, DegreeReceived, DateCompleted")] Education education)
         {
             if (ModelState.IsValid)
             {
@@ -85,7 +85,7 @@ namespace ProjectResume.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("ID,School, DegreeReceived, DegreeCompleted")] Education education)
+        public async Task<IActionResult> Edit(int id, [Bind("ID,School, DegreeReceived, DateCompleted")] Education education)
         {
             if (id != education.ID)
             {

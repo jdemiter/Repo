@@ -53,7 +53,7 @@ namespace ProjectResume.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("ID,Employer,JobTitle,StartDate,EndDate")] WorkExperience workExperience)
+        public async Task<IActionResult> Create([Bind("ID,Employer,Location,JobTitle,EmploymentStartDate,EmploymentEndDate")] WorkExperience workExperience)
         {
             if (ModelState.IsValid)
             {
@@ -85,7 +85,7 @@ namespace ProjectResume.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("ID,Employer,JobTitle,StartDate,EndDate")] WorkExperience workExperience)
+        public async Task<IActionResult> Edit(int id, [Bind("ID,Employer,Location, JobTitle,EmploymentStartDate,EmploymentEndDate")] WorkExperience workExperience)
         {
             if (id != workExperience.ID)
             {
